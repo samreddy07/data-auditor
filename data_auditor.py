@@ -17,7 +17,14 @@ from sklearn.svm import SVC
 from sklearn.preprocessing import OneHotEncoder
 
 
-st.title('Data Auditor')
+# st.title('Data Auditor')
+html_temp = """
+		<div style="background-color:{};padding:10px;border-radius:10px">
+		<h1 style="color:{};text-align:center;">Data Auditor </h1>
+		</div>
+		<br>
+		"""
+st.markdown(html_temp.format('#000000','white'),unsafe_allow_html=True)
 def prompt_file_upload():
     file_handler = st.file_uploader('Upload the CSV', type=['csv'])
 
