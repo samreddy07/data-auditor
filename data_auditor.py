@@ -69,7 +69,7 @@ if csv_filename is not None:
         raise st.StopException
 
     if selected_option == options[0]:
-        st.header('Exploratory Data Analysis')
+        st.info('Exploratory Data Analysis')
         st.subheader('THE WHOLE DATA')
         df = get_dataframe(csv_filename)
         st.dataframe(df)
@@ -105,7 +105,7 @@ if csv_filename is not None:
 
 
     if selected_option == options[1]:
-        st.subheader("Data Visualization")
+        st.info("Data Visualization")
         df = get_dataframe(csv_filename)
         
         if st.checkbox("Show Value Counts"):
@@ -140,7 +140,7 @@ if csv_filename is not None:
             
         
     if selected_option == options[2]:
-            st.subheader("Building ML Models")
+            st.info("Building ML Models")
             df = get_dataframe(csv_filename)
             df_cat= df.select_dtypes(include = 'object').astype(str).copy()
             onehot=OneHotEncoder(handle_unknown ='ignore')
@@ -190,7 +190,7 @@ if csv_filename is not None:
                 st.json(all_models)
                 
     if selected_option == options[3]:
-        st.header("About")
+        st.success("About")
         st.subheader("Creators")
         col1, col2, col3, col4 = st.beta_columns(4)
         image=('gnani.jpeg')
