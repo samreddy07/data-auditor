@@ -131,7 +131,7 @@ if csv_filename is not None:
                 st.line_chart(cust_data)
             if type_of_plot == 'hist' or 'box' or 'kde':
                 if len(selected_columns_names)>1:
-                    st.text('''select one coloumn''')
+                    st.warning('select one coloumn')
                 else:
                     fig, ax = plt.subplots()
                     cust_plot= df[get_singleton(selected_columns_names)].plot(kind=type_of_plot)
