@@ -192,7 +192,7 @@ if csv_filename is not None:
     if selected_option == options[3]:
         st.success("About")
         st.subheader("Creators")
-        col1, col2, col3, col4, col5 = st.beta_columns(4)
+        col1, col2, col3, col4, col5 = st.beta_columns(5)
         image=('Bhavani.jpeg')
         Bhavani = Image.open(image)
         col1.header("Bhavani")
